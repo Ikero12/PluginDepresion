@@ -106,3 +106,36 @@ function renym_wordpress_typo_fix( $text ) {
 }
 
 add_filter( 'the_content', 'renym_wordpress_typo_fix' );
+
+function dam22_shortcodes_init(){
+    function dam22_shortcode($atts = [], $content = null){
+        // do something to $content
+        $content = "<script>alert('Yepa ya estoy por aqui, no podia dejar mi stream
+Ahora que por fin ya he vuelto a twitch
+Demostraré que para esto nací
+Ya estoy por casa, ya ha llegado el papa
+Nunca di la chapa, pero Twitch lo puse en el mapa
+
+El mas cabron el más real, el menos copión, siempre lo hice de corazón
+El primer hispano en llegar al millón
+Ese soy yo por si no te acordabas
+Que fui yo quien remaba, cuando aquí no había nada
+Solo youtubers que no stremeaban
+
+Alli estaba yo, dandolo to'
+Vine de abajo y me puse en el top
+Dedicación y mucha pasión
+Hizo que en esto yo fuera el mejor
+
+Fueron pocos los que me apoyaron
+Y ahora mira monstro donde hemos llegado
+A mi muchos tontos me subestimaron
+Pero con su odio se atragantaron');</script>";
+        // always return
+        return $content;
+    }
+    add_shortcode('dam22', 'dam22_shortcode');
+}
+
+
+add_action('init', 'dam19_shortcodes_init');
